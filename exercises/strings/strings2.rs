@@ -2,11 +2,13 @@
 // Make me compile without changing the function signature!
 // Execute `rustlings hint strings2` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
+// I AM DONE
 
 fn main() {
     let word = String::from("green"); // Try not changing this line :)
-    if is_a_color_word(word) {
+    // étant donné que la variable est déjà créé et surrement utilisé autre part dans notre programme
+    // on vas tous simplement lui spécifier la référence en utilisant le borrow ? "&"
+    if is_a_color_word(&word) {
         println!("That is a color word I know!");
     } else {
         println!("That is not a color word I know.");
